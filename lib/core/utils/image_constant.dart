@@ -24,6 +24,9 @@ class ImageConstant {
 
   static String imgBookmark = '$imagePath/img_bookmark.svg';
 
+  static String imgBookmarkBlue = '$imagePath/img_bookmarkBlue.png';
+  static String imgBookmarkSBlue = '$imagePath/img_bookMarkSBlue.png';
+
   static String imgTifIcon1 = '$imagePath/img_tif_icon_1.png';
 
   static String imgCalendar = '$imagePath/img_calendar.svg';

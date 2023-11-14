@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:khushal_s_application4/core/utils/size_ext.dart';
 import '../core/app_export.dart';
 
 /// A collection of pre-defined text styles for customizing text appearance,
@@ -21,14 +22,14 @@ class CustomTextStyles {
       );
   static get bodyMediumOnPrimary => theme.textTheme.bodyMedium!.copyWith(
         color: theme.colorScheme.onPrimary,
-        fontSize: 15.fSize,
+        fontSize: 15.Sp,
       );
   static get bodySmallBluegray500 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.blueGray500,
       );
   // Headline text style
   static get headlineSmallPrimaryContainer =>
-      theme.textTheme.headlineSmall!.copyWith(
+       theme.textTheme.headlineSmall!.copyWith(
         color: theme.colorScheme.primaryContainer.withOpacity(1),
       );
   // Title text style
@@ -37,16 +38,16 @@ class CustomTextStyles {
       );
   static get titleMediumGray90016 => theme.textTheme.titleMedium!.copyWith(
         color: appTheme.gray900.withOpacity(0.65),
-        fontSize: 16.fSize,
+        fontSize: 16.Sp,
       );
   static get titleMediumGray60010 => theme.textTheme.titleSmall!.copyWith(
         color: appTheme.gray600.withOpacity(0.65),
-        fontSize: 7.fSize,
+        fontSize: 7.Sp,
       );
   static get titleMediumPrimaryContainer =>
       theme.textTheme.titleMedium!.copyWith(
         color: theme.colorScheme.primaryContainer.withOpacity(1),
-        fontSize: 16.fSize,
+        fontSize: 16.Sp,
       );
   static get titleSmallBlack90001 => theme.textTheme.titleSmall!.copyWith(
         color: appTheme.black90001,

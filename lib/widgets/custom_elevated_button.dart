@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:khushal_s_application4/core/app_export.dart';
+import 'package:khushal_s_application4/core/utils/size_ext.dart';
 import 'package:khushal_s_application4/widgets/base_button.dart';
 
 class CustomElevatedButton extends BaseButton {
@@ -46,7 +47,7 @@ class CustomElevatedButton extends BaseButton {
   }
 
   Widget get buildElevatedButtonWidget => Container(
-        height: this.height ?? 58.v,
+        height: this.height ?? 58.Sh,
         width: this.width ?? double.maxFinite,
         margin: margin,
         decoration: decoration,

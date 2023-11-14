@@ -12,6 +12,106 @@ import 'package:khushal_s_application4/widgets/app_bar/appbar_subtitle.dart';
 import 'package:khushal_s_application4/widgets/app_bar/appbar_trailing_image.dart';
 import 'package:khushal_s_application4/widgets/app_bar/custom_app_bar.dart';
 import 'package:khushal_s_application4/model/event_model.dart';
+// class HomeScreen extends StatefulWidget {
+//   const HomeScreen({Key? key}) : super(key: key);
+//
+//   @override
+//   State<HomeScreen> createState() => _HomeScreenState();
+// }
+//
+// class _HomeScreenState extends State<HomeScreen> {
+//   List<Event> events = [];
+//   bool isLoading = true;
+//
+//   @override
+//   void initState() {
+//     _fetchEventData();
+//     super.initState();
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     double width = MediaQuery.of(context).size.width;
+//     bool isLargeScreen = width > 800;
+//
+//     return SafeArea(
+//       child: Scaffold(
+//         appBar: _buildAppBar(context),
+//         body: isLoading
+//             ? Center(child: CircularProgressIndicator())
+//             : Padding(
+//           padding: EdgeInsets.symmetric(
+//             horizontal: isLargeScreen ? 48.0 : 24.0,
+//             vertical: isLargeScreen ? 36.0 : 23.0,
+//           ),
+//           child: ListView.separated(
+//             physics: BouncingScrollPhysics(),
+//             shrinkWrap: true,
+//             separatorBuilder: (
+//                 context,
+//                 index,
+//                 ) {
+//               return SizedBox(
+//                 height: isLargeScreen ? 24.0 : 12.0,
+//               );
+//             },
+//             itemCount: events.length,
+//             itemBuilder: (context, index) {
+//               return HomeItemWidget(event: events[index]);
+//             },
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+//
+//   PreferredSizeWidget _buildAppBar(BuildContext context) {
+//     return CustomAppBar(
+//       title: AppbarSubtitle(
+//         text: "Events",
+//         margin: EdgeInsets.only(left: 31.0),
+//       ),
+//       actions: [
+//         AppbarTrailingImage(
+//           onTap: () {
+//             Get.to(() => SearchScreen());
+//           },
+//           imagePath: ImageConstant.imgSearch,
+//           margin: EdgeInsets.only(
+//             left: 24.0,
+//             top: 9.0,
+//             right: 3.0,
+//           ),
+//         ),
+//         AppbarTrailingImage(
+//           imagePath: ImageConstant.imgOverflowMenu,
+//           margin: EdgeInsets.fromLTRB(16.0, 9.0, 27.0, 2.0),
+//         ),
+//       ],
+//     );
+//   }
+//
+//   Future<void> _fetchEventData() async {
+//     try {
+//       // Initialize your ApiService with the appropriate base URL
+//       ApiService apiService = ApiService();
+//       // Call the API to get events
+//       List<Event> fetchedEvents =
+//       await apiService.getAllEvents("https://sde-007.api.assignment.theinternetfolks.works");
+//       // Update the state with the fetched events
+//       setState(() {
+//         events = fetchedEvents;
+//         isLoading = false; // Set loading to false once data is fetched
+//       });
+//     } catch (e) {
+//       print('Error fetching events: $e');
+//       // Handle error here if needed
+//       setState(() {
+//         isLoading = false; // Set loading to false on error
+//       });
+//     }
+//   }
+// }
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -22,6 +122,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<Event> events = [];
+  bool isLoading = true;
 
   @override
   void initState() {
@@ -37,7 +138,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: _buildAppBar(context),
-        body: Padding(
+        body: isLoading
+            ? Center(child: CircularProgressIndicator())
+            : Padding(
           padding: EdgeInsets.symmetric(
             horizontal: isLargeScreen ? 48.0 : 24.0,
             vertical: isLargeScreen ? 36.0 : 23.0,
@@ -99,8 +202,12 @@ class _HomeScreenState extends State<HomeScreen> {
       // Update the state with the fetched events
       setState(() {
         events = fetchedEvents;
+        isLoading = false;
       });
     } catch (e) {
+      setState(() {
+        isLoading = false; // Set loading to false on error
+      });
       print('Error fetching events: $e');
     }
   }

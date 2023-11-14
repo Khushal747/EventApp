@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:khushal_s_application4/core/utils/size_ext.dart';
 import '../../core/app_export.dart';
 
 String _appTheme = "primary";
@@ -53,7 +54,7 @@ class ThemeHelper {
         style: ElevatedButton.styleFrom(
           backgroundColor: colorScheme.onError,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.h),
+            borderRadius: BorderRadius.circular(15  ),
           ),
           shadowColor: appTheme.indigo3003f,
           elevation: 10,
@@ -91,55 +92,55 @@ class TextThemes {
   static TextTheme textTheme(ColorScheme colorScheme) => TextTheme(
         bodyLarge: TextStyle(
           color: colorScheme.onError,
-          fontSize: 16.fSize,
+          fontSize: 16 ,
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
         ),
         bodyMedium: TextStyle(
           color: colorScheme.onError,
-          fontSize: 13.fSize,
+          fontSize: 13 ,
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
         ),
         bodySmall: TextStyle(
           color: appTheme.gray600,
-          fontSize: 12.fSize,
+          fontSize: 12 ,
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
         ),
         displaySmall: TextStyle(
           color: appTheme.gray900,
-          fontSize: 35.fSize,
+          fontSize: 35 ,
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
         ),
         headlineSmall: TextStyle(
           color: appTheme.gray900,
-          fontSize: 24.fSize,
+          fontSize: 24 ,
           fontFamily: 'Inter',
           fontWeight: FontWeight.w500,
         ),
         labelLarge: TextStyle(
           color: colorScheme.onError,
-          fontSize: 12.fSize,
+          fontSize: 12 ,
           fontFamily: 'Inter',
           fontWeight: FontWeight.w500,
         ),
         titleLarge: TextStyle(
           color: appTheme.black90001.withOpacity(0.46),
-          fontSize: 20.fSize,
+          fontSize: 20 ,
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
         ),
         titleMedium: TextStyle(
           color: appTheme.gray900,
-          fontSize: 18.fSize,
+          fontSize: 18 ,
           fontFamily: 'Inter',
           fontWeight: FontWeight.w500,
         ),
         titleSmall: TextStyle(
           color: appTheme.gray900,
-          fontSize: 15.fSize,
+          fontSize: 15 ,
           fontFamily: 'Inter',
           fontWeight: FontWeight.w500,
         ),

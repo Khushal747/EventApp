@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:khushal_s_application4/core/app_export.dart';
+import 'package:khushal_s_application4/core/utils/size_ext.dart';
 
 class CustomIconButton extends StatelessWidget {
   CustomIconButton({
@@ -52,7 +53,7 @@ class CustomIconButton extends StatelessWidget {
             decoration: decoration ??
                 BoxDecoration(
                   color: theme.colorScheme.onError,
-                  borderRadius: BorderRadius.circular(12.h),
+                  borderRadius: BorderRadius.circular(12.Sw),
                 ),
             child: child,
           ),

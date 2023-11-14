@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:intl/intl.dart';
 import 'package:khushal_s_application4/core/app_export.dart';
+import 'package:khushal_s_application4/core/utils/size_ext.dart';
 
 import '../../../model/search_event_model.dart';
 import '../../event_details_screen/event_details_screen.dart';
@@ -43,8 +44,8 @@ class SearchlistItemWidget extends StatelessWidget {
                 borderRadius: BorderRadiusStyle.roundedBorder10,
               ),
               child: Container(
-                height: isLargeScreen ? 120.v : 92.v,
-                width: isLargeScreen ? 100.h : 79.h,
+                height: isLargeScreen ? 120.Sh : 92.Sh,
+                width: isLargeScreen ? 100.Sw : 79.Sw,
                 decoration: AppDecoration.fillOrange.copyWith(
                   borderRadius: BorderRadiusStyle.roundedBorder10,
                 ),
@@ -54,18 +55,18 @@ class SearchlistItemWidget extends StatelessWidget {
                     Align(
                       alignment: Alignment.center,
                       child: SizedBox(
-                        height: isLargeScreen ? 120.v : 92.v,
-                        width: isLargeScreen ? 100.h : 79.h,
+                        height: isLargeScreen ? 120.Sh : 92.Sh,
+                        width: isLargeScreen ? 100.Sw : 79.Sw,
                         child: Stack(
                           alignment: Alignment.center,
                           children: [
                             CustomImageView(
                               fit: BoxFit.cover,
                               imagePath: eventId.bannerImage,
-                              height: isLargeScreen ? 120.v : 92.v,
-                              width: isLargeScreen ? 100.h : 79.h,
+                              height: isLargeScreen ? 120.Sh : 92.Sh,
+                              width: isLargeScreen ? 100.Sw : 79.Sw,
                               radius: BorderRadius.circular(
-                                isLargeScreen ? 12.h : 10.h,
+                                isLargeScreen ? 12.Sw : 10.Sw,
                               ),
                               alignment: Alignment.center,
                             ),
@@ -79,9 +80,9 @@ class SearchlistItemWidget extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(
-                left: isLargeScreen ? 20.h : 18.h,
-                top: isLargeScreen ? 16.v : 12.v,
-                bottom: isLargeScreen ? 12.v : 9.v,
+                left: isLargeScreen ? 20.Sw : 18.Sw,
+                top: isLargeScreen ? 16.Sh : 12.Sh,
+                bottom: isLargeScreen ? 12.Sh : 9.Sh,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,9 +91,9 @@ class SearchlistItemWidget extends StatelessWidget {
                     formattedDate + " - " + formattedDay + " - " + "${formatTime(dateTime)}",
                     style: theme.textTheme.labelLarge,
                   ),
-                  SizedBox(height: isLargeScreen ? 6.v : 3.v),
+                  SizedBox(height: isLargeScreen ? 6.Sh : 3.Sh),
                   SizedBox(
-                    width: isLargeScreen ? 223.h : 167.h,
+                    width: isLargeScreen ? 223.Sw : 167.Sw,
                     child: Text(
                       eventId.title,
                       maxLines: isLargeScreen ? 3 : 2,

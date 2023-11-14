@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:khushal_s_application4/core/app_export.dart';
+import 'package:khushal_s_application4/core/utils/size_ext.dart';
 
 class AppDecoration {
   // Fill decorations
@@ -32,8 +33,8 @@ class AppDecoration {
         boxShadow: [
           BoxShadow(
             color: appTheme.blueGray6000f,
-            spreadRadius: 2.h,
-            blurRadius: 2.h,
+            spreadRadius: 2.Sw,
+            blurRadius: 2.Sw,
             offset: Offset(
               0,
               10,
@@ -46,8 +47,8 @@ class AppDecoration {
         boxShadow: [
           BoxShadow(
             color: theme.colorScheme.onPrimaryContainer,
-            spreadRadius: 2.h,
-            blurRadius: 2.h,
+            spreadRadius: 2.Sw,
+            blurRadius: 2.Sw,
             offset: Offset(
               0,
               8,
@@ -60,10 +61,10 @@ class AppDecoration {
 class BorderRadiusStyle {
   // Rounded borders
   static BorderRadius get roundedBorder10 => BorderRadius.circular(
-        10.h,
+        10.Sw,
       );
   static BorderRadius get roundedBorder16 => BorderRadius.circular(
-        16.h,
+        16.Sw,
       );
 }
 

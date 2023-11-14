@@ -6,7 +6,6 @@ import 'package:khushal_s_application4/model/event_detail_model.dart';
 import 'package:khushal_s_application4/presentation/home_screen/home_screen.dart';
 import 'package:khushal_s_application4/widgets/splashScreen.dart';
 import 'package:provider/provider.dart';
-
 import '../api/event_detail_api.dart';
 import '../api/search_api_service.dart';
 import '../presentation/event_details_screen/event_details_screen.dart';
